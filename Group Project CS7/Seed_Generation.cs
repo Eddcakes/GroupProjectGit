@@ -24,7 +24,7 @@ namespace Group_Project_CS7
             catch (Exception e) //If the file cannot be openned, this will be run
             {
                 string text = randomNumberGenerator(); //creates a string of eight random numbers.
-                System.IO.File.WriteAllText(@"C:\Users\computing\Desktop\Group Project CS7\Group Project CS7\bin\Debug\seed.txt", text); //creates a new pernament file containing the seed.
+                System.IO.File.WriteAllText("seed.txt", text); //creates a new pernament file containing the seed.
                 key = Convert.ToInt32(text); //converts the string of the seed into an int, which is then returned to the Main.
             }
             return key;

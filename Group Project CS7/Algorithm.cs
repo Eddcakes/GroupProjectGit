@@ -23,7 +23,7 @@ namespace Group_Project_CS7
                 for (int i = enSeed + Convert.ToInt32(letter); i > 0; i--)
                 {
                     temp++;
-                    if (temp > 95)
+                    if (temp > 94)
                         temp = 0;
                 }
                 encryptionOutput = encryptionOutput + Convert.ToChar(temp + 32);

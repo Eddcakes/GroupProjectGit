@@ -35,5 +35,37 @@ namespace Group_Project_CS7
             textBox2.Text = encrypt.Encryptor(userInput);              //when the button is pressed, it runs the encryption 
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (textBox1.UseSystemPasswordChar == true)
+            {
+                textBox1.UseSystemPasswordChar = false;
+                button2.Text = "Hide characters";
+            }
+            else
+            {
+                textBox1.UseSystemPasswordChar = true;
+                button2.Text = "Show characters";
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(textBox2.Text);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (button4.Text == "Show instruction")
+            {
+                ClientSize = new System.Drawing.Size(322, 130);
+                button4.Text = "Hide instruction";
+            }
+            else
+            {
+                ClientSize = new System.Drawing.Size(322, 85);
+                button4.Text = "Show instruction";
+            }
+        }
     }
 }
